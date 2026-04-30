@@ -1,0 +1,131 @@
+:root {
+  --bg: #f7f9fc;
+  --panel: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --border: #dbe3ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(160deg, #eef3ff 0%, #f7f9fc 55%, #eefaf6 100%);
+  color: var(--text);
+}
+
+body.graph-view {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #f8fbff;
+}
+
+.page {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.06);
+}
+
+.card h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+}
+
+.card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.top-nav {
+  margin-bottom: 1.25rem;
+}
+
+.top-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.graph-shell {
+  margin-top: 1rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.06);
+  overflow: hidden;
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.graph-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.graph-area {
+  padding: 1rem;
+  flex: 1;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  min-height: 78vh;
+  display: block;
+  border-radius: 10px;
+  background: #f8fbff;
+  border: 1px dashed #bfd3f4;
+}
+
+body.graph-view svg {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  border: none;
+  border-radius: 0;
+  background: #f8fbff;
+}
+
+#circular-link-graph {
+  overflow: visible;
+}
+
+.caption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
