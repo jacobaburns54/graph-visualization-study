@@ -41,7 +41,13 @@ h1 {
 
 p {
   color: var(--muted);
-  line-height: 1.5;
+  line-height: 1.7;
+  font-size: 1.02rem;
+  max-width: 75ch;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+  -webkit-font-smoothing: antialiased;
 }
 
 .card-grid {
