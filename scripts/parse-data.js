@@ -94,9 +94,9 @@ export function parseGraphData(rawData) {
 
 export async function loadCampusInvolvementData(csvPath = DEFAULT_CSV_PATH) {
   const response = await fetch(csvPath);
-  if (!response.ok) {
-    throw new Error(`Failed to load CSV data from ${csvPath}`);
-  }
+  // if (!response.ok) {
+  //   throw new Error(`Failed to load CSV data from ${csvPath}`);
+  // }
 
   const rawCsv = await response.text();
   return parseGraphData(rawCsv);
