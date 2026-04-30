@@ -1,4 +1,4 @@
-const DEFAULT_CSV_PATH = "campus_involvement_data.csv";
+const DEFAULT_CSV_PATH = new URL("../campus_involvement_data.csv", import.meta.url);
 
 function normalizeText(value) {
   return (value ?? "").replace(/\r/g, "").trim();
